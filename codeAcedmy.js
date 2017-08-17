@@ -1,60 +1,19 @@
 /*
- closuregit init
+constructor
  */
-function showName(firstName) {
-    var introName = "pihu";
-    return introName;
 
-    function fullName(lastName) {
+function User(name) {
 
-        console.log(introName+"  "+lastName+"  "+firstName);
+    if(!new.target)
+    {
+        console.log("inside user")
+        new User(name);
     }
-    return fullName();
+    this.name=name;
+
 }
 
-showName("piyuri","sahu");
-
-//It is access to outer functions variables even if outer function retures something.
-
-var x=showName("Anusha");
-
-    x("sahu");
-
-
-/*
- hoisting variables
- */
-// (function () {
-//     var a = 1;
-//     console.log(a + " " + b + " " + c);
-//     var b = 2;
-//
-//
-// })();
-
-/*
- hoisting function
- */
-
-
-
-var foo = function () {
-    console.log("function hoisting");
-    
-}
-foo();
-
-// var myvar;
-//
-// console.log("hello");
-// function myFunction()
-// {
-//     setInterval(printFunction,3000);
-//
-// }
-//
-// function printFunction() {
-//     console.log("Hello!\n");
-// }
-//
-// myFunction();
+let firstUser= new User("piyuir");
+console.log(firstUser.name);
+let secondUser=User("sahu");
+ console.log(secondUser.name);
