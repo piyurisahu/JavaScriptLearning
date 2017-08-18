@@ -1,19 +1,12 @@
 /*
-constructor
+asynchronous
+ Philip Roberts: What the heck is the event loop anyway? | JSConf EU
  */
 
-function User(name) {
+console.log("hi");
 
-    if(!new.target)
-    {
-        console.log("inside user")
-        new User(name);
-    }
-    this.name=name;
+setTimeout(function () {
+    console.log("hi will be invoked after 5 min");
+},5000);
 
-}
-
-let firstUser= new User("piyuir");
-console.log(firstUser.name);
-let secondUser=User("sahu");
- console.log(secondUser.name);
+console.log("Piyuri");
