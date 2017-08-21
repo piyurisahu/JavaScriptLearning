@@ -13,7 +13,7 @@ console.log("square roor of each element : " + squareRootOf2);
 // var kvArray=[{key:1,"age":24},{"name":"palak","age":26}];
 
 var kvArray = [{key: 1, value: 24}, {key: 2, value: 26}];
-
+add
 var reformatted = kvArray.map(function (x) {
     var objArray = {};
     objArray[x.key] = x.value;
